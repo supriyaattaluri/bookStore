@@ -1,0 +1,25 @@
+<html>
+<body>
+
+{% for author in authors %}
+  {% if loop.first %}<ol>{% endif %}
+  <li>{{ author.authorname }}</li>
+  {% if loop.last %}</ol>{% endif %}
+{% endfor %}
+
+<br>
+
+<table border="1">
+
+<tr><th>Author Name </th><th>Book Name </th></tr>
+{% for author in authors %}
+  <tr><td>{{ author.authorname }}</td>
+  <td>{{ author.bookname }}</td></tr>
+{% endfor %}
+
+
+</table>
+
+
+</body>
+</html>

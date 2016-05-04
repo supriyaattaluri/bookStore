@@ -1,0 +1,25 @@
+<html>
+<body>
+
+{% for book in books %}
+  {% if loop.first %}<ol>{% endif %}
+  <li>{{ book.bookname }}</li>
+  {% if loop.last %}</ol>{% endif %}
+{% endfor %}
+
+<br>
+
+<table border="1">
+
+<tr><th>Book Name </th><th>Book ISBN </th></tr>
+{% for book in books %}
+  <tr><td>{{ book.bookname }}</td>
+  <td>{{ book.isbnnumber }}</td></tr>
+{% endfor %}
+
+
+</table>
+
+
+</body>
+</html>
